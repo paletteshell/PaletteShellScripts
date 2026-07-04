@@ -7,7 +7,7 @@ using module .\PaletteScriptAttributes.psm1
     Show a polished Markdown reference with syntax examples, rendered output, and practical tips
 #>
 [ScriptGroup('Reference')]
-[ScriptVersion('1.0.0')]
+[ScriptVersion('1.0.1')]
 [ScriptIcon('📝')]
 [ScriptTimeout(5000)]
 [ScriptOutput('Markdown')]
