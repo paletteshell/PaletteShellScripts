@@ -1,0 +1,46 @@
+name: Validate PR contribution
+
+on:
+  pull_request:
+    paths:
+      - "scripts/**"
+      - "tools/Build-Index.ps1"
+      - "tools/Test-Contribution.ps1"
+      - ".github/workflows/validate-pr.yml"
+      - "CONTRIBUTING.md"
+      - "index.json"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-pr-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate contribution checklist
+        shell: pwsh
+        run: ./tools/Test-Contribution.ps1
+
+      - name: Build catalog
+        shell: pwsh
+        run: ./tools/Build-Index.ps1 -OutputPath ([System.IO.Path]::GetTempFileName())
+
+      - name: Check generated catalog was not edited
+        if: github.event_name == 'pull_request'
+        shell: pwsh
+        run: |
+          $changedIndex = git diff --name-only '${{ github.event.pull_request.base.sha }}' '${{ github.event.pull_request.head.sha }}' -- index.json
+          if ($changedIndex) {
+            Write-Error 'index.json is generated after merge. Remove it from this PR and let the build-index workflow update it on main.'
+            exit 1
+          }

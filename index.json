@@ -1,0 +1,165 @@
+{
+  "version": 1,
+  "scripts": [
+    {
+      "path": "scripts/phireForge/CheatSheet-Markdown.ps1",
+      "title": "Markdown Cheat Sheet",
+      "description": "Show a polished Markdown reference with syntax examples, rendered output, and practical tips",
+      "group": "Reference",
+      "icon": "📝",
+      "author": "phireForge",
+      "tags": [],
+      "sha": "1545d557d133e55687af505e4c736c560090c143"
+    },
+    {
+      "path": "scripts/phireForge/CheatSheet-RegularExpressions.ps1",
+      "title": "Regular Expressions Cheat Sheet",
+      "description": "Show a practical regular-expression reference with tokens, flags, recipes, and PowerShell examples",
+      "group": "Reference",
+      "icon": "🔤",
+      "author": "phireForge",
+      "tags": [],
+      "sha": "6aa0f5dc405f80ec545a7216d162ce3cfbc0b44e"
+    },
+    {
+      "path": "scripts/phireForge/Clipboard-LinesToCsv.ps1",
+      "title": "Join Lines",
+      "description": "Take multi-line text from the clipboard and join it into a single comma-delimited line",
+      "group": "Text",
+      "icon": "🔗",
+      "author": "phireForge",
+      "tags": [],
+      "sha": "93b296fea562ad6d17ba51490ad668a9a6aff52b"
+    },
+    {
+      "path": "scripts/phireForge/Clipboard-LinesToDoubleQuotedCsv.ps1",
+      "title": "Join Lines (Double Quoted)",
+      "description": "Take multi-line text from the clipboard, wrap each line in double quotes, and join into one comma-delimited line",
+      "group": "Text",
+      "icon": "🔗",
+      "author": "phireForge",
+      "tags": [],
+      "sha": "251eb0926170fa04e39f941ab39b6320da2ac417"
+    },
+    {
+      "path": "scripts/phireForge/Clipboard-LinesToSingleQuoteCsv.ps1",
+      "title": "Join Lines (Quoted)",
+      "description": "Take multi-line text from the clipboard, wrap each line in single quotes, and join into one comma-delimited line",
+      "group": "Text",
+      "icon": "🔗",
+      "author": "phireForge",
+      "tags": [],
+      "sha": "4aa55928b52d828a56910e281b43a898a7b1eaed"
+    },
+    {
+      "path": "scripts/phireForge/Clipboard-PreviewMarkdown.ps1",
+      "title": "Preview Markdown",
+      "description": "Take Markdown text from the clipboard and display it rendered in Markdown mode",
+      "group": "Text",
+      "icon": "👁️",
+      "author": "phireForge",
+      "tags": [],
+      "sha": "f81ef43f33c2e7adf655631f2a5b9324096196ae"
+    },
+    {
+      "path": "scripts/phireForge/Flush-DNS.ps1",
+      "title": "Flush DNS Cache",
+      "description": "Clear the Windows DNS resolver cache so the next lookups hit DNS fresh",
+      "group": "Utilities",
+      "icon": "🧹",
+      "author": "phireForge",
+      "tags": [],
+      "sha": "a6bd75fa562bd2b931283cde4f7e1c4256d34ec3"
+    },
+    {
+      "path": "scripts/phireForge/Generate-Password.ps1",
+      "title": "Generate Password",
+      "description": "Generate a random password from a form of options and copy it to the clipboard",
+      "group": "Utilities",
+      "icon": "🔑",
+      "author": "phireForge",
+      "tags": [],
+      "sha": "700386ea9d8a178b086eb818dc608e3306383ce5"
+    },
+    {
+      "path": "scripts/phireForge/List-Processes.ps1",
+      "title": "List Processes",
+      "description": "Browse running processes sorted by memory use; select one to copy its PID (pair with \"Stop Process\" to terminate it)",
+      "group": "Utilities",
+      "icon": "📋",
+      "author": "phireForge",
+      "tags": [],
+      "sha": "a46be27b66f20ccc30f5be309ceaa9f5d92b479f"
+    },
+    {
+      "path": "scripts/phireForge/Stop-Process.ps1",
+      "title": "Stop Process",
+      "description": "Terminate a running process by PID or name. Pairs with \"List Processes\", which copies a PID you can paste here.",
+      "group": "Utilities",
+      "icon": "🛑",
+      "author": "phireForge",
+      "tags": [],
+      "sha": "ca75e5ba90d610bbd910ea6409f0210d9b3eb3e7"
+    },
+    {
+      "path": "scripts/phireForge/View-CertificateExpiry.ps1",
+      "title": "Certificate Expiry",
+      "description": "Show local certificates that are expired or expiring soon, rendered as Markdown",
+      "group": "Utilities",
+      "icon": "🔐",
+      "author": "phireForge",
+      "tags": [],
+      "sha": "5d82f03ba21fb7d068f75bd0e08e12816b7fe5c3"
+    },
+    {
+      "path": "scripts/phireForge/View-DiskSpace.ps1",
+      "title": "Disk Space",
+      "description": "Show disk space statistics for all drives, rendered as Markdown",
+      "group": "Utilities",
+      "icon": "💾",
+      "author": "phireForge",
+      "tags": [],
+      "sha": "2189cc18708b2114e048e89a3c75ea14fa2a3dca"
+    },
+    {
+      "path": "scripts/phireForge/View-EnvironmentVariables.ps1",
+      "title": "Env Vars to Markdown",
+      "description": "Dump the current environment variables as a fenced Markdown code block",
+      "group": "Utilities",
+      "icon": "🌱",
+      "author": "phireForge",
+      "tags": [],
+      "sha": "96d69fb1733d0f20cb76ac55203ae72afd5f36bf"
+    },
+    {
+      "path": "scripts/phireForge/View-EventLogErrors.ps1",
+      "title": "Event Log Errors",
+      "description": "Show recent Windows Event Log errors, rendered as Markdown",
+      "group": "Utilities",
+      "icon": "🚨",
+      "author": "phireForge",
+      "tags": [],
+      "sha": "d522b31c5c2066c0a4be39892f5b9435fe943d14"
+    },
+    {
+      "path": "scripts/phireForge/View-SystemStatistics.ps1",
+      "title": "System Statistics",
+      "description": "Show operating system, hardware, memory, disk, network, and process statistics rendered as Markdown",
+      "group": "Utilities",
+      "icon": "📊",
+      "author": "phireForge",
+      "tags": [],
+      "sha": "0f2f35ba65d1aaa883c544b76e9cf4518d98ea56"
+    },
+    {
+      "path": "scripts/phireForge/View-TimeZones.ps1",
+      "title": "Time Zones",
+      "description": "Show current time across all or selected time zones, rendered as Markdown",
+      "group": "Utilities",
+      "icon": "🕒",
+      "author": "phireForge",
+      "tags": [],
+      "sha": "3b6430eca549f609bbdb13066411f04e53fcecec"
+    }
+  ]
+}
