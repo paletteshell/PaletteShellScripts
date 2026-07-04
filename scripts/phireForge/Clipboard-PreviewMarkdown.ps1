@@ -6,8 +6,8 @@ using module .\PaletteScriptAttributes.psm1
 .DESCRIPTION
     Take Markdown text from the clipboard and display it rendered in Markdown mode
 #>
-[ScriptHost('pwsh')]
 [ScriptGroup('Text')]
+[ScriptVersion('1.0.0')]
 [ScriptIcon('👁️')]
 [ScriptTimeout(5000)]
 [ScriptOutput('Markdown')]

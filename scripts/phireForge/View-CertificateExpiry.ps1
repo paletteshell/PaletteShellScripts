@@ -16,8 +16,8 @@ using module .\PaletteScriptAttributes.psm1
 .PARAMETER MaxCertificates
     Maximum number of certificates to display
 #>
-[ScriptHost('pwsh')]
 [ScriptGroup('Utilities')]
+[ScriptVersion('1.0.0')]
 [ScriptIcon('🔐')]
 [ScriptTimeout(20000)]
 [ScriptOutput('Markdown')]

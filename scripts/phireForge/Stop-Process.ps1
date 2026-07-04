@@ -14,8 +14,8 @@ using module .\PaletteScriptAttributes.psm1
     .\Stop-Process.ps1 -Target notepad
     Terminate every process named notepad
 #>
-[ScriptHost('pwsh')]
 [ScriptGroup('Utilities')]
+[ScriptVersion('1.0.0')]
 [ScriptIcon('🛑')]
 [ScriptTimeout(10000)]
 [ScriptOutput('Toast')]

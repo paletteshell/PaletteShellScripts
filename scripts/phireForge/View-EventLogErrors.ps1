@@ -12,8 +12,8 @@ using module .\PaletteScriptAttributes.psm1
 .PARAMETER IncludeWarnings
     Include warning events along with errors
 #>
-[ScriptHost('pwsh')]
 [ScriptGroup('Utilities')]
+[ScriptVersion('1.0.0')]
 [ScriptIcon('🚨')]
 [ScriptTimeout(20000)]
 [ScriptOutput('Markdown')]

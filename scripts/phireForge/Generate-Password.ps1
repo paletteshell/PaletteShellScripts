@@ -21,8 +21,8 @@ using module .\PaletteScriptAttributes.psm1
     .\Password-Generator.ps1 -Length 20 -Symbols:$true
     Generate a 20-character password that includes symbols
 #>
-[ScriptHost('pwsh')]
 [ScriptGroup('Utilities')]
+[ScriptVersion('1.0.0')]
 [ScriptIcon('🔑')]
 [ScriptTimeout(5000)]
 [ScriptOutput('Clipboard')]

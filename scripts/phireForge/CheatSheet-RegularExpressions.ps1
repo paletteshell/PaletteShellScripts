@@ -6,8 +6,8 @@ using module .\PaletteScriptAttributes.psm1
 .DESCRIPTION
     Show a practical regular-expression reference with tokens, flags, recipes, and PowerShell examples
 #>
-[ScriptHost('pwsh')]
 [ScriptGroup('Reference')]
+[ScriptVersion('1.0.0')]
 [ScriptIcon('🔤')]
 [ScriptTimeout(5000)]
 [ScriptOutput('Markdown')]

@@ -159,10 +159,9 @@ foreach ($authorFolder in $authorFolders) {
             }
         }
 
-        if (-not $attributes.ContainsKey('ScriptHost')) {
-            Add-Failure -Path $relativePath -Message 'Missing [ScriptHost(''pwsh''|''powershell'')].'
-        }
-        elseif ($AllowedHosts -notcontains $attributes['ScriptHost']) {
+        # [ScriptHost(...)] is optional - PaletteShell falls back to the user's configured
+        # default host when it's omitted, so only validate the value when it's present.
+        if ($attributes.ContainsKey('ScriptHost') -and $AllowedHosts -notcontains $attributes['ScriptHost']) {
             Add-Failure -Path $relativePath -Message "Invalid ScriptHost '$($attributes['ScriptHost'])'. Expected one of: $($AllowedHosts -join ', ')."
         }
 
