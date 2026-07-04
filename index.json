@@ -9,7 +9,9 @@
       "icon": "📝",
       "author": "phireForge",
       "tags": [],
-      "sha": "1545d557d133e55687af505e4c736c560090c143"
+      "sha": "00210897cbfc3dd6e14bfbd7052274f623f135e5",
+      "version": "1.0.0",
+      "lastModified": "2026-07-04T06:30:07-04:00"
     },
     {
       "path": "scripts/phireForge/CheatSheet-RegularExpressions.ps1",
@@ -19,7 +21,9 @@
       "icon": "🔤",
       "author": "phireForge",
       "tags": [],
-      "sha": "6aa0f5dc405f80ec545a7216d162ce3cfbc0b44e"
+      "sha": "8fdc369141ee2f1390380415125457c746ee2b11",
+      "version": "1.0.0",
+      "lastModified": "2026-07-04T06:30:07-04:00"
     },
     {
       "path": "scripts/phireForge/Clipboard-LinesToCsv.ps1",
@@ -29,7 +33,9 @@
       "icon": "🔗",
       "author": "phireForge",
       "tags": [],
-      "sha": "93b296fea562ad6d17ba51490ad668a9a6aff52b"
+      "sha": "2ad5803ded6629a56e7c9f26b2ffe3d3afed81fe",
+      "version": "1.0.0",
+      "lastModified": "2026-07-04T06:30:07-04:00"
     },
     {
       "path": "scripts/phireForge/Clipboard-LinesToDoubleQuotedCsv.ps1",
@@ -39,7 +45,9 @@
       "icon": "🔗",
       "author": "phireForge",
       "tags": [],
-      "sha": "251eb0926170fa04e39f941ab39b6320da2ac417"
+      "sha": "0407711c6bd5cb4742d7267656619f3e12ca65ac",
+      "version": "1.0.0",
+      "lastModified": "2026-07-04T06:30:07-04:00"
     },
     {
       "path": "scripts/phireForge/Clipboard-LinesToSingleQuoteCsv.ps1",
@@ -49,7 +57,9 @@
       "icon": "🔗",
       "author": "phireForge",
       "tags": [],
-      "sha": "4aa55928b52d828a56910e281b43a898a7b1eaed"
+      "sha": "8e05bab4b7907c14947287d46aa7d89ac93925d4",
+      "version": "1.0.0",
+      "lastModified": "2026-07-04T06:30:07-04:00"
     },
     {
       "path": "scripts/phireForge/Clipboard-PreviewMarkdown.ps1",
@@ -59,7 +69,9 @@
       "icon": "👁️",
       "author": "phireForge",
       "tags": [],
-      "sha": "f81ef43f33c2e7adf655631f2a5b9324096196ae"
+      "sha": "53ba875882efadc2418b22d50e915d14a6c97573",
+      "version": "1.0.0",
+      "lastModified": "2026-07-04T06:30:07-04:00"
     },
     {
       "path": "scripts/phireForge/Flush-DNS.ps1",
@@ -69,7 +81,9 @@
       "icon": "🧹",
       "author": "phireForge",
       "tags": [],
-      "sha": "a6bd75fa562bd2b931283cde4f7e1c4256d34ec3"
+      "sha": "890907771ba92ff55e9f39051aad3b877961095b",
+      "version": "1.0.0",
+      "lastModified": "2026-07-04T06:30:07-04:00"
     },
     {
       "path": "scripts/phireForge/Generate-Password.ps1",
@@ -79,7 +93,9 @@
       "icon": "🔑",
       "author": "phireForge",
       "tags": [],
-      "sha": "700386ea9d8a178b086eb818dc608e3306383ce5"
+      "sha": "953bf2951cdaa7645db3c63b06693e5daab05c8a",
+      "version": "1.0.0",
+      "lastModified": "2026-07-04T06:30:07-04:00"
     },
     {
       "path": "scripts/phireForge/List-Processes.ps1",
@@ -89,7 +105,9 @@
       "icon": "📋",
       "author": "phireForge",
       "tags": [],
-      "sha": "a46be27b66f20ccc30f5be309ceaa9f5d92b479f"
+      "sha": "d036fab6f7e35c39636242d54d080c0d79f5f701",
+      "version": "1.0.0",
+      "lastModified": "2026-07-04T06:30:07-04:00"
     },
     {
       "path": "scripts/phireForge/Stop-Process.ps1",
@@ -99,7 +117,9 @@
       "icon": "🛑",
       "author": "phireForge",
       "tags": [],
-      "sha": "ca75e5ba90d610bbd910ea6409f0210d9b3eb3e7"
+      "sha": "7bc6fb9a0ed61ac07896b6e43ba7a84cc37926a8",
+      "version": "1.0.0",
+      "lastModified": "2026-07-04T06:30:07-04:00"
     },
     {
       "path": "scripts/phireForge/View-CertificateExpiry.ps1",
@@ -109,7 +129,9 @@
       "icon": "🔐",
       "author": "phireForge",
       "tags": [],
-      "sha": "5d82f03ba21fb7d068f75bd0e08e12816b7fe5c3"
+      "sha": "01868aa8bd6b9905c73aecb51fdd9d261574b339",
+      "version": "1.0.0",
+      "lastModified": "2026-07-04T06:30:07-04:00"
     },
     {
       "path": "scripts/phireForge/View-DiskSpace.ps1",
@@ -119,7 +141,9 @@
       "icon": "💾",
       "author": "phireForge",
       "tags": [],
-      "sha": "2189cc18708b2114e048e89a3c75ea14fa2a3dca"
+      "sha": "96b2ca373a2e5b77996aa922dc7a92f3bb77a811",
+      "version": "1.0.0",
+      "lastModified": "2026-07-04T06:30:07-04:00"
     },
     {
       "path": "scripts/phireForge/View-EnvironmentVariables.ps1",
@@ -129,7 +153,9 @@
       "icon": "🌱",
       "author": "phireForge",
       "tags": [],
-      "sha": "96d69fb1733d0f20cb76ac55203ae72afd5f36bf"
+      "sha": "dd7602333fd59cfdb0aca1419a3bfa19f4e0d698",
+      "version": "1.0.0",
+      "lastModified": "2026-07-04T06:30:07-04:00"
     },
     {
       "path": "scripts/phireForge/View-EventLogErrors.ps1",
@@ -139,7 +165,9 @@
       "icon": "🚨",
       "author": "phireForge",
       "tags": [],
-      "sha": "d522b31c5c2066c0a4be39892f5b9435fe943d14"
+      "sha": "f908e8f01e9fad17bd05d0992c1a32302d7ee6da",
+      "version": "1.0.0",
+      "lastModified": "2026-07-04T06:30:07-04:00"
     },
     {
       "path": "scripts/phireForge/View-SystemStatistics.ps1",
@@ -149,7 +177,9 @@
       "icon": "📊",
       "author": "phireForge",
       "tags": [],
-      "sha": "0f2f35ba65d1aaa883c544b76e9cf4518d98ea56"
+      "sha": "1bad0d6c52c5a0185efb44b4212845f742b34b2d",
+      "version": "1.0.0",
+      "lastModified": "2026-07-04T06:30:07-04:00"
     },
     {
       "path": "scripts/phireForge/View-TimeZones.ps1",
@@ -159,7 +189,9 @@
       "icon": "🕒",
       "author": "phireForge",
       "tags": [],
-      "sha": "3b6430eca549f609bbdb13066411f04e53fcecec"
+      "sha": "9e3a1ad3f03053eddcb90316506382bae3a47aa5",
+      "version": "1.0.0",
+      "lastModified": "2026-07-04T06:30:07-04:00"
     }
   ]
 }
