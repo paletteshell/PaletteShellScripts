@@ -33,8 +33,13 @@ jobs:
   build-index:
     runs-on: ubuntu-latest
     steps:
+      # Full history (not the default shallow depth-1 clone) - Build-Index.ps1 runs `git log`
+      # per script to record each file's last-modified commit date, which needs the actual
+      # history to be present, not just the tip commit.
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       # Manual runs are restricted to codeowners (.github/CODEOWNERS) - push-to-main and PR
       # validation builds are untouched by this and need no such check (push already requires

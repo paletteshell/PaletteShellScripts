@@ -8,8 +8,8 @@ using module .\PaletteScriptAttributes.psm1
 .PARAMETER Filter
     Optional text to match against the process name
 #>
-[ScriptHost('pwsh')]
 [ScriptGroup('Utilities')]
+[ScriptVersion('1.0.0')]
 [ScriptIcon('📋')]
 [ScriptTimeout(15000)]
 [ScriptOutput('List')]
