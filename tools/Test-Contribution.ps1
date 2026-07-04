@@ -18,7 +18,7 @@ $ErrorActionPreference = 'Stop'
 
 $ExcludedAuthors = @('_template')
 $AllowedHosts = @('pwsh', 'powershell')
-$AllowedOutputs = @('None', 'Toast', 'Clipboard', 'Markdown', 'File', 'List')
+$AllowedOutputs = @('None', 'Toast', 'Clipboard', 'Markdown', 'Result', 'File', 'List')
 $failures = [System.Collections.Generic.List[string]]::new()
 
 function Add-Failure {
@@ -89,6 +89,23 @@ function Get-FirstAttributeArgument {
     }
 
     return $null
+}
+
+function Test-ScriptOutputSpec {
+    param([Parameter(Mandatory)][string]$Value)
+
+    $parts = $Value.Split(':', 2)
+    $mode = $parts[0].Trim()
+    if ($AllowedOutputs -notcontains $mode) {
+        return $false
+    }
+
+    if ($parts.Count -eq 1) {
+        return $true
+    }
+
+    # PaletteShell supports extension hints only for File output, e.g. File:csv.
+    return $mode -eq 'File' -and -not [string]::IsNullOrWhiteSpace($parts[1])
 }
 
 $scriptsRoot = Join-Path $RepoRoot 'scripts'
@@ -165,8 +182,8 @@ foreach ($authorFolder in $authorFolders) {
             Add-Failure -Path $relativePath -Message "Invalid ScriptHost '$($attributes['ScriptHost'])'. Expected one of: $($AllowedHosts -join ', ')."
         }
 
-        if ($attributes.ContainsKey('ScriptOutput') -and $AllowedOutputs -notcontains $attributes['ScriptOutput']) {
-            Add-Failure -Path $relativePath -Message "Invalid ScriptOutput '$($attributes['ScriptOutput'])'. Expected one of: $($AllowedOutputs -join ', ')."
+        if ($attributes.ContainsKey('ScriptOutput') -and -not (Test-ScriptOutputSpec -Value $attributes['ScriptOutput'])) {
+            Add-Failure -Path $relativePath -Message "Invalid ScriptOutput '$($attributes['ScriptOutput'])'. Expected one of: $($AllowedOutputs -join ', '), or File:<extension>."
         }
 
         if ($attributes.ContainsKey('ScriptTimeout')) {
