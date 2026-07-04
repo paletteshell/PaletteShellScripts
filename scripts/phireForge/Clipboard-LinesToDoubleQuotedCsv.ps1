@@ -6,8 +6,8 @@ using module .\PaletteScriptAttributes.psm1
 .DESCRIPTION
     Take multi-line text from the clipboard, wrap each line in double quotes, and join into one comma-delimited line
 #>
-[ScriptHost('pwsh')]
 [ScriptGroup('Text')]
+[ScriptVersion('1.0.0')]
 [ScriptIcon('🔗')]
 [ScriptTimeout(5000)]
 [ScriptOutput('Clipboard')]

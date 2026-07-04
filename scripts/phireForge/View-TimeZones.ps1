@@ -10,8 +10,8 @@ using module .\PaletteScriptAttributes.psm1
 .PARAMETER Use24HourTime
     Display times in 24-hour format
 #>
-[ScriptHost('pwsh')]
 [ScriptGroup('Utilities')]
+[ScriptVersion('1.0.0')]
 [ScriptIcon('🕒')]
 [ScriptTimeout(10000)]
 [ScriptOutput('Markdown')]
