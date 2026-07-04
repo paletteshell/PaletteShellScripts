@@ -55,7 +55,7 @@ Set-ClipboardText $guid
 | `[ScriptVersion('1.0.0')]` | Script version (SemVer recommended) — lets tools detect when a newer copy is available |
 | `[ScriptIcon('🆔')]` | Emoji or glyph icon |
 | `[ScriptTimeout(5000)]` | Timeout in milliseconds |
-| `[ScriptOutput('None'\|'Toast'\|'Clipboard'\|'Markdown'\|'File'\|'List')]` | How stdout is handled |
+| `[ScriptOutput('None'\|'Toast'\|'Clipboard'\|'Markdown'\|'Result'\|'File'\|'File:csv'\|'List')]` | How stdout is handled. `File:<extension>` opens captured stdout as that file type. |
 | `[ScriptCwd('path')]` | Working directory |
 | `[ScriptEnv('KEY','value')]` | Set an environment variable |
 | `[RequiresElevation()]` | Run as administrator (or use `#Requires -RunAsAdministrator`) |
