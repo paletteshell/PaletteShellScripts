@@ -1,0 +1,4 @@
+# Used for PR review requests and by .github/workflows/build-index.yml to restrict who can
+# manually trigger the catalog build (workflow_dispatch). Not a gate on script contributions -
+# anyone can open a PR under their own scripts/<handle>/ folder per CONTRIBUTING.md.
+* @paletteshell
