@@ -6,8 +6,8 @@ using module .\PaletteScriptAttributes.psm1
 .DESCRIPTION
     Show a polished Markdown reference with syntax examples, rendered output, and practical tips
 #>
-[ScriptHost('pwsh')]
 [ScriptGroup('Reference')]
+[ScriptVersion('1.0.0')]
 [ScriptIcon('📝')]
 [ScriptTimeout(5000)]
 [ScriptOutput('Markdown')]

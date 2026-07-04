@@ -89,11 +89,12 @@ function Get-ScriptMetadata {
     $title = if ($help.Synopsis) { $help.Synopsis } else { [System.IO.Path]::GetFileNameWithoutExtension($Path) }
     $description = $help.Description
 
-    # [ScriptGroup(...)] / [ScriptIcon(...)] live on the param block's attribute list, ahead
-    # of param() itself - read them straight off the AST rather than executing anything.
-    # ParamBlock is null for a script with no param() at all.
+    # [ScriptGroup(...)] / [ScriptIcon(...)] / [ScriptVersion(...)] live on the param block's
+    # attribute list, ahead of param() itself - read them straight off the AST rather than
+    # executing anything. ParamBlock is null for a script with no param() at all.
     $group = $null
     $icon = $null
+    $version = $null
 
     if ($ast.ParamBlock) {
         foreach ($attributeAst in $ast.ParamBlock.Attributes) {
@@ -105,8 +106,16 @@ function Get-ScriptMetadata {
             switch ($attributeAst.TypeName.Name) {
                 'ScriptGroup' { $group = $firstArg.Value }
                 'ScriptIcon' { $icon = $firstArg.Value }
+                'ScriptVersion' { $version = $firstArg.Value }
             }
         }
+    }
+
+    # A script that omits [ScriptVersion(...)] is assumed to be at the baseline version rather
+    # than having "no version" - keeps every catalog entry comparable instead of the Store
+    # having to special-case a missing field.
+    if (-not $version) {
+        $version = '1.0.0'
     }
 
     [pscustomobject]@{
@@ -114,6 +123,7 @@ function Get-ScriptMetadata {
         Description = $description
         Group       = $group
         Icon        = $icon
+        Version     = $version
     }
 }
 
@@ -141,15 +151,25 @@ Get-ChildItem -Path $scriptsRoot -Directory | ForEach-Object {
 
         $sha = (git -C $RepoRoot hash-object $scriptFile.FullName).Trim()
 
+        # Commit date of the most recent commit that touched this file - i.e. what GitHub's
+        # own "Latest commit" file history shows. Requires full history (not a shallow clone);
+        # on a depth-1 checkout every file would falsely show the same single available commit.
+        # $null (rather than empty output) when the file has no commits yet, e.g. it's staged
+        # but not committed - `git log` prints nothing rather than an empty line.
+        $lastModifiedRaw = git -C $RepoRoot log -1 --format=%cI -- $relativePath
+        $lastModified = if ($lastModifiedRaw) { $lastModifiedRaw.Trim() } else { $null }
+
         $entries.Add([ordered]@{
-            path        = $relativePath
-            title       = $meta.Title
-            description = $meta.Description
-            group       = $meta.Group
-            icon        = $meta.Icon
-            author      = $author
-            tags        = @()
-            sha         = $sha
+            path         = $relativePath
+            title        = $meta.Title
+            description  = $meta.Description
+            group        = $meta.Group
+            icon         = $meta.Icon
+            author       = $author
+            tags         = @()
+            sha          = $sha
+            version      = $meta.Version
+            lastModified = $lastModified
         })
     }
 }

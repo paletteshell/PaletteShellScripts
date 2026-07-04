@@ -8,8 +8,8 @@ using module .\PaletteScriptAttributes.psm1
 .PARAMETER TopProcesses
     Number of memory-heavy processes to include
 #>
-[ScriptHost('pwsh')]
 [ScriptGroup('Utilities')]
+[ScriptVersion('1.0.0')]
 [ScriptIcon('📊')]
 [ScriptTimeout(20000)]
 [ScriptOutput('Markdown')]

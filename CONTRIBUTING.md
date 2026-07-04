@@ -30,8 +30,8 @@ using module .\PaletteScriptAttributes.psm1
 .DESCRIPTION
     Generate a new GUID and copy it to the clipboard.
 #>
-[ScriptHost('pwsh')]
 [ScriptGroup('Utilities')]
+[ScriptVersion('1.0.0')]
 [ScriptIcon('🆔')]
 [ScriptTimeout(5000)]
 [ScriptOutput('None')]
@@ -50,8 +50,9 @@ Set-ClipboardText $guid
 
 | Attribute | Purpose |
 |---|---|
-| `[ScriptHost('pwsh'\|'powershell')]` | Which PowerShell to run under |
+| `[ScriptHost('pwsh'\|'powershell')]` | Which PowerShell to run under. Optional — omit it to run under the user's configured default host instead of pinning one. |
 | `[ScriptGroup('Name')]` | Category/group in the palette |
+| `[ScriptVersion('1.0.0')]` | Script version (SemVer recommended) — lets tools detect when a newer copy is available |
 | `[ScriptIcon('🆔')]` | Emoji or glyph icon |
 | `[ScriptTimeout(5000)]` | Timeout in milliseconds |
 | `[ScriptOutput('None'\|'Toast'\|'Clipboard'\|'Markdown'\|'File'\|'List')]` | How stdout is handled |

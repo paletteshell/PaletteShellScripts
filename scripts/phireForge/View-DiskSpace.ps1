@@ -6,8 +6,8 @@ using module .\PaletteScriptAttributes.psm1
 .DESCRIPTION
     Show disk space statistics for all drives, rendered as Markdown
 #>
-[ScriptHost('pwsh')]
 [ScriptGroup('Utilities')]
+[ScriptVersion('1.0.0')]
 [ScriptIcon('💾')]
 [ScriptTimeout(15000)]
 [ScriptOutput('Markdown')]

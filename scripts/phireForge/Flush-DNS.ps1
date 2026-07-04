@@ -6,8 +6,8 @@ using module .\PaletteScriptAttributes.psm1
 .DESCRIPTION
     Clear the Windows DNS resolver cache so the next lookups hit DNS fresh
 #>
-[ScriptHost('pwsh')]
 [ScriptGroup('Utilities')]
+[ScriptVersion('1.0.0')]
 [ScriptIcon('🧹')]
 [ScriptTimeout(10000)]
 [ScriptOutput('Toast')]

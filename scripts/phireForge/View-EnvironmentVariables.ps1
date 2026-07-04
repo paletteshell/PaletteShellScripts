@@ -6,8 +6,8 @@ using module .\PaletteScriptAttributes.psm1
 .DESCRIPTION
     Dump the current environment variables as a fenced Markdown code block
 #>
-[ScriptHost('pwsh')]
 [ScriptGroup('Utilities')]
+[ScriptVersion('1.0.0')]
 [ScriptIcon('🌱')]
 [ScriptTimeout(10000)]
 [ScriptOutput('Markdown')]
