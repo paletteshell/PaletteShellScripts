@@ -33,9 +33,9 @@
       "icon": "📝",
       "author": "phireForge",
       "tags": [],
-      "sha": "00210897cbfc3dd6e14bfbd7052274f623f135e5",
-      "version": "1.0.0",
-      "lastModified": "2026-07-04T06:30:07-04:00"
+      "sha": "b5b9363038aa206051cefcfed65ba95dc78559ba",
+      "version": "1.0.1",
+      "lastModified": "2026-07-04T09:18:40-04:00"
     },
     {
       "path": "scripts/phireForge/CheatSheet-RegularExpressions.ps1",
